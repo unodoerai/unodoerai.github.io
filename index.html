@@ -3,76 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UNODOER PCB Design and Manufacturing</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Unodoerai Portfolio</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #050a18;
+            color: #ffffff;
+        }
+        header {
+            background: #00e0ff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav a {
+            color: #050a18;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            background-image: url('hero-image.jpg');
+            height: 80vh;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .hero h1 {
+            font-size: 3em;
+            color: #ffffff;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: #1a1e25;
+            padding: 20px;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: #00e0ff;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
 </head>
 <body>
     <header>
+        <h1>Unodoerai</h1>
         <nav>
-            <ul>
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
-
-    <section id="hero">
-        <h1>Welcome to UNODOER PCB Design and Manufacturing</h1>
-        <p>Your one-stop solution for all PCB needs.</p>
+    <section class="hero">
+        <h1>Welcome to My Portfolio</h1>
     </section>
-
-    <section id="about">
-        <h2>About Us</h2>
-        <p>At UNODOER, we specialize in designing and manufacturing high-quality printed circuit boards.</p>
-    </section>
-
-    <section id="services">
-        <h2>Our Services</h2>
-        <div class="service-card">
-            <img src="https://source.unsplash.com/featured/?pcbdesign" alt="PCB Design">
-            <h3>PCB Design</h3>
-            <p>High-quality design services for your PCB needs.</p>
-        </div>
-        <div class="service-card">
-            <img src="https://source.unsplash.com/featured/?pcbmanufacturing" alt="PCB Manufacturing">
-            <h3>PCB Manufacturing</h3>
-            <p>Reliable manufacturing with fast turnaround times.</p>
-        </div>
-        <div class="service-card">
-            <img src="https://source.unsplash.com/featured/?pcbassembly" alt="PCB Assembly">
-            <h3>PCB Assembly</h3>
-            <p>Precision assembly services for your circuit boards.</p>
-        </div>
-    </section>
-
-    <section id="portfolio">
-        <h2>Our Projects</h2>
-        <div class="project-item">
-            <h3>Industrial Grade Multi-layer PCB Assembly</h3>
-        </div>
-        <div class="project-item">
-            <h3>IoT Device PCB Design & Manufacturing</h3>
-        </div>
-        <div class="project-item">
-            <h3>Consumer Electronics PCB Solutions</h3>
-        </div>
-        <div class="project-item">
-            <h3>Automotive Grade PCB Assembly</h3>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>For inquiries, please reach us at contact@unodoer.com.</p>
-    </section>
-
+    <main class="container">
+        <section id="services">
+            <h2>Services</h2>
+            <div class="card">
+                <img src="pcb-image1.jpg" alt="PCB Design 1" style="width:100%">
+                <h3>PCB Design</h3>
+                <p>High-quality PCB design services.</p>
+            </div>
+            <div class="card">
+                <img src="pcb-image2.jpg" alt="PCB Design 2" style="width:100%">
+                <h3>PCB Prototyping</h3>
+                <p>Fast and reliable prototyping solutions.</p>
+            </div>
+        </section>
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <div class="card">
+                <img src="portfolio-image1.jpg" alt="Project 1" style="width:100%">
+                <h3>Project 1</h3>
+                <p>A brief description of project 1.</p>
+            </div>
+            <div class="card">
+                <img src="portfolio-image2.jpg" alt="Project 2" style="width:100%">
+                <h3>Project 2</h3>
+                <p>A brief description of project 2.</p>
+            </div>
+        </section>
+    </main>
     <footer>
-        <p>&copy; 2026 UNODOER. All rights reserved.</p>
+        <p>© 2026 Unodoerai. All rights reserved.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
