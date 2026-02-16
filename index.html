@@ -1,103 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Unodoer - Modern Cloud ERP</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #0f172a;
-      color: white;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UNODOER | Design. Develop. Deliver.</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    scroll-behavior:smooth;
+}
+
+/* HEADER */
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:rgba(0,0,0,0.7);
+    position:fixed;
+    width:100%;
+    z-index:1000;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:800;
+    color:#38bdf8;
+}
+
+nav a{
+    margin-left:25px;
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#38bdf8;
+}
+
+/* HERO */
+
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:0 20px;
+    background:linear-gradient(to right,#020617,#0f172a);
+    animation:fadeIn 2s ease-in;
+}
+
+.hero h1{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.hero h2{
+    font-weight:300;
+    letter-spacing:5px;
+    color:#38bdf8;
+    margin-bottom:25px;
+}
+
+.hero p{
+    max-width:700px;
+    margin-bottom:35px;
+    font-size:18px;
+}
+
+.btn{
+    padding:14px 35px;
+    background:#38bdf8;
+    color:black;
+    border-radius:30px;
+    text-decoration:none;
+    transition:0.3s;
+    font-weight:600;
+}
+
+.btn:hover{
+    background:white;
+    transform:scale(1.05);
+}
+
+/* SECTION */
+
+section{
+    padding:100px 8%;
+    text-align:center;
+}
+
+.section-title{
+    font-size:35px;
+    margin-bottom:40px;
+    color:#38bdf8;
+}
+
+/* SERVICES */
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#1e293b;
+    padding:30px;
+    border-radius:15px;
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    background:#334155;
+}
+
+/* CONTACT */
+
+.contact p{
+    margin:10px 0;
+    font-size:18px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#020617;
+    text-align:center;
+    padding:20px;
+    font-size:14px;
+}
+
+/* ANIMATION */
+
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+    .hero h1{
+        font-size:32px;
     }
-    header {
-      padding: 120px 20px;
-      text-align: center;
-    }
-    h1 {
-      font-size: 52px;
-      margin-bottom: 20px;
-    }
-    p {
-      font-size: 20px;
-      color: #cbd5e1;
-      max-width: 700px;
-      margin: 0 auto 40px;
-    }
-    .btn {
-      background: #2563eb;
-      padding: 14px 32px;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: 600;
-      margin: 10px;
-      display: inline-block;
-    }
-    .section {
-      padding: 80px 20px;
-      text-align: center;
-    }
-    .features {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 40px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .feature {
-      background: #1e293b;
-      padding: 30px;
-      border-radius: 12px;
-      width: 280px;
-    }
-    footer {
-      text-align: center;
-      padding: 40px;
-      color: #94a3b8;
-      font-size: 14px;
-    }
-  </style>
+}
+
+</style>
 </head>
+
 <body>
 
 <header>
-  <h1>Unodoer</h1>
-  <p>
-    The modern cloud ERP platform for growing businesses.
-    Finance, CRM, Inventory, HR — unified in one intelligent system.
-  </p>
-  <a href="#" class="btn">Request Early Access</a>
-  <a href="#" class="btn" style="background:#1e40af;">Book Demo</a>
+    <div class="logo">UNODOER</div>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
 
-<section class="section">
-  <h2>Everything Your Business Needs</h2>
-  <div class="features">
-    <div class="feature">
-      <h3>💰 Finance & Accounting</h3>
-      <p>General ledger, invoicing, billing, tax compliance.</p>
+<section class="hero">
+    <h1>Complete PCB Solutions</h1>
+    <h2>Design. Develop. Deliver.</h2>
+    <p>
+        UNODOER is an Indian PCB Design, Manufacturing and Assembly company 
+        delivering high-precision electronic solutions for industrial and commercial applications.
+    </p>
+    <a href="#contact" class="btn">Contact Us</a>
+</section>
+
+<section id="about">
+    <h2 class="section-title">About UNODOER</h2>
+    <p>
+        UNODOER provides end-to-end PCB Design, Manufacturing and Assembly services.
+        We support startups, OEMs and industrial clients with reliable, cost-effective
+        and high-quality electronics production — proudly Made in India.
+    </p>
+</section>
+
+<section id="services">
+    <h2 class="section-title">Our Services</h2>
+    <div class="services">
+        <div class="card">
+            <h3>PCB Design</h3>
+            <p>High precision schematic & PCB layout design solutions.</p>
+        </div>
+        <div class="card">
+            <h3>PCB Manufacturing</h3>
+            <p>Single-layer, multi-layer and custom PCB fabrication.</p>
+        </div>
+        <div class="card">
+            <h3>PCB Assembly</h3>
+            <p>SMT, Through-hole and turnkey PCBA solutions.</p>
+        </div>
     </div>
-    <div class="feature">
-      <h3>📦 Inventory Management</h3>
-      <p>Real-time stock tracking and warehouse automation.</p>
-    </div>
-    <div class="feature">
-      <h3>📊 CRM</h3>
-      <p>Lead management, sales pipeline, customer insights.</p>
-    </div>
-    <div class="feature">
-      <h3>👥 HR & Payroll</h3>
-      <p>Employee records, payroll, attendance and compliance.</p>
-    </div>
-  </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2 class="section-title">Contact Us</h2>
+    <p><strong>Company Email:</strong> Info@unodeor.com</p>
+    <p><strong>Founder:</strong> Tojai Shah</p>
+    <p><strong>Founder Email:</strong> tojaishah@unodoer.com</p>
 </section>
 
 <footer>
-  © 2026 Unodoer Technologies. All rights reserved.
+    © 2026 UNODOER | Design. Develop. Deliver.
 </footer>
 
 </body>
