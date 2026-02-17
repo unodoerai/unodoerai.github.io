@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Unodoer Inc | Coming Soon</title>
+<title>UnoDoer Inc | Coming Soon</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 * {
@@ -13,71 +15,107 @@
 }
 
 body {
-    height: 100vh;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(-45deg, #0b1e3d, #163e75, #0a2a5e, #1f4f91);
-    background-size: 400% 400%;
-    animation: gradientMove 12s ease infinite;
+    font-family: 'Poppins', sans-serif;
+    background: #ffffff;
+    color: #0b1e3d;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    height: 100vh;
     text-align: center;
+    overflow: hidden;
 }
 
-@keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+/* Subtle animated background circles */
+body::before, body::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(11, 30, 61, 0.05);
+    animation: float 8s infinite ease-in-out;
+}
+
+body::before {
+    width: 300px;
+    height: 300px;
+    top: -80px;
+    left: -80px;
+}
+
+body::after {
+    width: 250px;
+    height: 250px;
+    bottom: -80px;
+    right: -80px;
+    animation-delay: 3s;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(20px); }
+    100% { transform: translateY(0px); }
 }
 
 .container {
-    background: rgba(255,255,255,0.05);
-    padding: 60px 40px;
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-    max-width: 600px;
+    max-width: 700px;
+    padding: 40px;
+    animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 h1 {
-    font-size: 42px;
+    font-size: 48px;
+    font-weight: 700;
     letter-spacing: 2px;
-    margin-bottom: 10px;
 }
 
-h2 {
-    font-weight: 300;
-    margin-bottom: 30px;
+h1 span {
     color: #ff9800;
 }
 
-p {
-    font-size: 18px;
-    margin-bottom: 20px;
+.slogan {
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: 400;
+    color: #444;
+}
+
+.status {
+    margin-top: 30px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #0b1e3d;
+}
+
+.info {
+    margin-top: 25px;
+    font-size: 17px;
     line-height: 1.6;
 }
 
-.email {
-    font-size: 20px;
-    font-weight: bold;
+.highlight {
+    font-weight: 600;
+    color: #ff9800;
 }
 
-.email a {
+a {
     color: #ff9800;
     text-decoration: none;
 }
 
-.email a:hover {
+a:hover {
     text-decoration: underline;
 }
 
 .footer {
     position: absolute;
     bottom: 20px;
-    width: 100%;
     font-size: 14px;
-    opacity: 0.8;
+    color: #777;
 }
 </style>
 </head>
@@ -85,22 +123,36 @@ p {
 <body>
 
 <div class="container">
-    <h1>Unodoer Inc</h1>
-    <h2>Advanced PCB Design & Manufacturing</h2>
 
-    <p>
-        Our website is currently under construction.<br>
-        We are building something professional and powerful.
-    </p>
+    <h1>Uno<span>Doer</span> Inc</h1>
 
-    <div class="email">
-        For inquiries:<br>
-        <a href="mailto:Info@unoder.com">Info@unoder.com</a>
+    <div class="slogan">
+        Engineering Precision. Powering Innovation.
     </div>
+
+    <div class="status">
+        Website Under Construction
+    </div>
+
+    <div class="info">
+        We are building a professional platform for advanced PCB design, 
+        manufacturing and electronics solutions.<br><br>
+
+        For more information, email us at:<br>
+        <span class="highlight">
+            <a href="mailto:Info@unoder.com">Info@unoder.com</a>
+        </span>
+        <br><br>
+
+        <strong>Indian Branch Contact:</strong><br>
+        Tojai Shah<br>
+        <span class="highlight">+91 81500 55103</span>
+    </div>
+
 </div>
 
 <div class="footer">
-    © 2026 Unodoer Inc | Hong Kong
+    © 2026 UnoDoer Inc | Global Electronics Solutions
 </div>
 
 </body>
