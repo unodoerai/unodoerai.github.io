@@ -1,166 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>UNODOER | PCB Design & Manufacturing</title>
-<meta name="description" content="UNODOER - Complete PCB Design, Manufacturing and Assembly Solutions in India.">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-<!-- ✅ External CSS File -->
-<link rel="stylesheet" href="style.css">
-
-<style>
-/* Minimal fallback if CSS fails to load */
-body { font-family: 'Poppins', sans-serif; margin: 0; }
-</style>
-
+    <meta charset="UTF-8">
+    <title>Unodoer Inc | PCB Design & Manufacturing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-<header id="header">
-  <div class="logo">UNODOER</div>
-  <nav>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<header>
+    <div class="container">
+        <h1 class="logo">Unodoer Inc</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="manufacturing.html">Manufacturing</a>
+            <a href="assembly.html">Assembly</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
 </header>
 
 <section class="hero">
-  <h1>UNODOER</h1>
-  <h2>Design. Develop. Deliver.</h2>
-  <p>
-    Complete PCB Design, Manufacturing and Assembly Solutions in India.
-    From concept to final delivery with precision engineering.
-  </p>
-  <a href="#contact" class="btn">Request a Quote</a>
+    <div class="container">
+        <h2>Advanced PCB Design & Electronics Manufacturing</h2>
+        <p>High-Precision PCB Solutions for Global Industries</p>
+        <p><strong>Located in Kwun Tong Industrial Area, Hong Kong</strong></p>
+        <a href="contact.html" class="btn">Request a Quote</a>
+    </div>
 </section>
 
-<section id="services">
-  <h2 class="section-title">Our Services</h2>
-  <div class="grid">
-    <div class="card">
-      <i class="fas fa-microchip"></i>
-      <h3>PCB Design</h3>
-      <p>Advanced schematic and layout design solutions.</p>
+<section class="about">
+    <div class="container">
+        <h2>About Unodoer Inc</h2>
+        <p>
+            Unodoer Inc is a professional PCB design, manufacturing and assembly company
+            based in the electronics hub of Hong Kong. We specialize in multilayer PCB layout,
+            rapid prototyping, SMT assembly and mass production for industrial and commercial applications.
+        </p>
     </div>
-
-    <div class="card">
-      <i class="fas fa-industry"></i>
-      <h3>PCB Manufacturing</h3>
-      <p>Single & Multi-layer PCB fabrication.</p>
-    </div>
-
-    <div class="card">
-      <i class="fas fa-cogs"></i>
-      <h3>PCB Assembly</h3>
-      <p>SMT & Through-hole turnkey assembly.</p>
-    </div>
-  </div>
 </section>
 
-<section class="stats">
-  <div class="grid">
-    <div>
-      <h3 id="count1">0</h3>
-      <p>Projects Completed</p>
+<section class="services">
+    <div class="container">
+        <h2>Our Core Services</h2>
+        <div class="service-box">
+            <h3>PCB Designing</h3>
+            <p>High-speed, multilayer PCB layout and schematic development.</p>
+        </div>
+        <div class="service-box">
+            <h3>PCB Manufacturing</h3>
+            <p>1-12 Layer fabrication with strict quality control and IPC standards.</p>
+        </div>
+        <div class="service-box">
+            <h3>PCB Assembly</h3>
+            <p>Complete SMT & Through-hole assembly with inspection and testing.</p>
+        </div>
     </div>
-    <div>
-      <h3 id="count2">0</h3>
-      <p>Clients Served</p>
-    </div>
-    <div>
-      <h3 id="count3">0</h3>
-      <p>On-Time Delivery %</p>
-    </div>
-  </div>
 </section>
 
-<section id="contact">
-  <h2 class="section-title">Contact Us</h2>
-  <div class="contact-box">
-
-    <!-- ✅ Replace YOUR_FORM_ID -->
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <input type="text" name="Name" placeholder="Your Name" required>
-      <input type="email" name="Email" placeholder="Your Email" required>
-      <textarea name="Message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Inquiry</button>
-    </form>
-
-    <p class="contact-email">
-      <strong>Email:</strong> info@unodoer.com
-    </p>
-  </div>
+<section class="why-us">
+    <div class="container">
+        <h2>Why Choose Us?</h2>
+        <ul>
+            <li>✔ 10+ Years Industry Experience</li>
+            <li>✔ Advanced Manufacturing Equipment</li>
+            <li>✔ Fast Turnaround Time</li>
+            <li>✔ International Quality Standards</li>
+            <li>✔ Global Shipping</li>
+        </ul>
+    </div>
 </section>
 
 <footer>
-  © 2026 UNODOER | Design. Develop. Deliver. | Made in India
+    <div class="container">
+        <p>Unodoer Inc</p>
+        <p>Kwun Tong Industrial Area, Kowloon, Hong Kong</p>
+        <p>Email: sales@unodoer.com | Phone: +852 3000 0000</p>
+        <p>© 2026 Unodoer Inc. All Rights Reserved.</p>
+    </div>
 </footer>
-
-<script>
-
-/* HEADER SHRINK */
-window.addEventListener("scroll", () => {
-  document.getElementById("header")
-    .classList.toggle("scrolled", window.scrollY > 50);
-});
-
-/* SCROLL REVEAL */
-const cards = document.querySelectorAll(".card");
-
-function revealCards() {
-  cards.forEach(card => {
-    if (card.getBoundingClientRect().top < window.innerHeight - 100) {
-      card.classList.add("show");
-    }
-  });
-}
-
-window.addEventListener("scroll", revealCards);
-revealCards();
-
-/* COUNTER (Runs Once Only) */
-let counterStarted = false;
-
-function animateValue(id, start, end, duration) {
-  const obj = document.getElementById(id);
-  const range = end - start;
-  const increment = range / (duration / 16);
-  let current = start;
-
-  const timer = setInterval(() => {
-    current += increment;
-    if ((increment > 0 && current >= end) || (increment < 0 && current <= end)) {
-      current = end;
-      clearInterval(timer);
-    }
-    obj.textContent = Math.floor(current);
-  }, 16);
-}
-
-function startCounters() {
-  if (counterStarted) return;
-
-  const statsSection = document.querySelector(".stats");
-
-  if (statsSection.getBoundingClientRect().top < window.innerHeight) {
-    counterStarted = true;
-
-    animateValue("count1", 0, 500, 1500);
-    animateValue("count2", 0, 120, 1500);
-    animateValue("count3", 0, 99, 1500);
-  }
-}
-
-window.addEventListener("scroll", startCounters);
-startCounters();
-
-</script>
 
 </body>
 </html>
