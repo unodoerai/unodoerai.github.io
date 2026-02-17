@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UnoDoer Inc | Coming Soon</title>
+<title>UnoDoer Inc | PCB Solutions</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 * {
@@ -15,145 +15,192 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background: #ffffff;
-    color: #0b1e3d;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-    overflow: hidden;
-}
-
-/* Subtle animated background circles */
-body::before, body::after {
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-    background: rgba(11, 30, 61, 0.05);
-    animation: float 8s infinite ease-in-out;
-}
-
-body::before {
-    width: 300px;
-    height: 300px;
-    top: -80px;
-    left: -80px;
-}
-
-body::after {
-    width: 250px;
-    height: 250px;
-    bottom: -80px;
-    right: -80px;
-    animation-delay: 3s;
-}
-
-@keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(20px); }
-    100% { transform: translateY(0px); }
-}
-
-.container {
-    max-width: 700px;
-    padding: 40px;
-    animation: fadeIn 1.5s ease;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-h1 {
-    font-size: 48px;
-    font-weight: 700;
-    letter-spacing: 2px;
-}
-
-h1 span {
-    color: #ff9800;
-}
-
-.slogan {
-    font-size: 20px;
-    margin-top: 10px;
-    font-weight: 400;
-    color: #444;
-}
-
-.status {
-    margin-top: 30px;
-    font-size: 22px;
-    font-weight: 600;
-    color: #0b1e3d;
-}
-
-.info {
-    margin-top: 25px;
-    font-size: 17px;
+    color: #1a1a1a;
     line-height: 1.6;
 }
 
-.highlight {
-    font-weight: 600;
+/* HERO */
+.hero {
+    background: linear-gradient(135deg, #0b1e3d, #163e75);
+    color: white;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 42px;
+}
+
+.hero h1 span {
     color: #ff9800;
 }
 
-a {
-    color: #ff9800;
-    text-decoration: none;
+.hero p {
+    margin-top: 15px;
+    font-size: 18px;
 }
 
-a:hover {
-    text-decoration: underline;
+/* SERVICES */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 50px 8%;
+    background: #f8f9fc;
 }
 
-.footer {
-    position: absolute;
-    bottom: 20px;
+.service-box {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.service-box:hover {
+    transform: translateY(-6px);
+}
+
+.service-box h3 {
+    color: #0b1e3d;
+    margin-bottom: 10px;
+}
+
+.service-box p {
     font-size: 14px;
-    color: #777;
+    color: #555;
+}
+
+/* STATUS */
+.status {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.status h2 {
+    font-size: 26px;
+    color: #0b1e3d;
+    margin-bottom: 15px;
+}
+
+.status p {
+    max-width: 600px;
+    margin: auto;
+    font-size: 15px;
+    color: #444;
+}
+
+/* CONTACT */
+.contact-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 50px 8%;
+}
+
+.contact-box {
+    background: #f9f9f9;
+    padding: 25px;
+    border-left: 5px solid #ff9800;
+    border-radius: 10px;
+}
+
+.contact-box h3 {
+    margin-bottom: 10px;
+    color: #0b1e3d;
+}
+
+.highlight {
+    color: #ff9800;
+    font-weight: 600;
+}
+
+/* FOOTER */
+footer {
+    background: #0b1e3d;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    font-size: 14px;
+}
+
+/* MOBILE IMPROVEMENTS */
+@media (max-width: 600px) {
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .status h2 {
+        font-size: 22px;
+    }
+
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
-
+<section class="hero">
     <h1>Uno<span>Doer</span> Inc</h1>
+    <p>Engineering Precision. Powering Innovation.</p>
+</section>
 
-    <div class="slogan">
-        Engineering Precision. Powering Innovation.
+<section class="services">
+    <div class="service-box">
+        <h3>PCB Designing</h3>
+        <p>Advanced multilayer PCB layout and schematic solutions.</p>
     </div>
 
-    <div class="status">
-        Website Under Construction
+    <div class="service-box">
+        <h3>PCB Manufacturing</h3>
+        <p>High-precision fabrication with strict IPC standards.</p>
     </div>
 
-    <div class="info">
-        We are building a professional platform for advanced PCB design, 
-        manufacturing and electronics solutions.<br><br>
-
-        For more information, email us at:<br>
-        <span class="highlight">
-            <a href="mailto:Info@unoder.com">Info@unoder.com</a>
-        </span>
-        <br><br>
-
-        <strong>Indian Branch Contact:</strong><br>
-        Tojai Shah<br>
-        <span class="highlight">+91 81500 55103</span>
+    <div class="service-box">
+        <h3>PCB Assembling</h3>
+        <p>Professional SMT & through-hole assembly services.</p>
     </div>
 
-</div>
+    <div class="service-box">
+        <h3>Electronics PCB Solutions</h3>
+        <p>Complete end-to-end electronics production support.</p>
+    </div>
+</section>
 
-<div class="footer">
-    © 2026 UnoDoer Inc | Global Electronics Solutions
-</div>
+<section class="status">
+    <h2>Website Under Construction</h2>
+    <p>
+        We are building a powerful corporate platform for advanced PCB design,
+        manufacturing, assembling and electronics solutions worldwide.
+    </p>
+</section>
+
+<section class="contact-section">
+    <div class="contact-box">
+        <h3>Hong Kong Branch</h3>
+        <p>Kwun Tong Industrial Area<br>Kowloon, Hong Kong</p>
+        <p class="highlight">+852 5800 5103</p>
+        <p class="highlight">Info@unoder.com</p>
+    </div>
+
+    <div class="contact-box">
+        <h3>Indian Branch</h3>
+        <p>Tojai Shah</p>
+        <p class="highlight">+91 81500 55103</p>
+    </div>
+</section>
+
+<footer>
+    © 2026 UnoDoer Inc | Global PCB & Electronics Solutions
+</footer>
 
 </body>
 </html>
