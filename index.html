@@ -1,47 +1,107 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Unodoer Inc | PCB Manufacturing Hong Kong</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unodoer Inc | Coming Soon</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(-45deg, #0b1e3d, #163e75, #0a2a5e, #1f4f91);
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    background: rgba(255,255,255,0.05);
+    padding: 60px 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    max-width: 600px;
+}
+
+h1 {
+    font-size: 42px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-weight: 300;
+    margin-bottom: 30px;
+    color: #ff9800;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.email {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.email a {
+    color: #ff9800;
+    text-decoration: none;
+}
+
+.email a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    font-size: 14px;
+    opacity: 0.8;
+}
+</style>
 </head>
+
 <body>
 
-<header>
-    <div class="container">
-        <div class="logo">Unodoer Inc</div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="manufacturing.html">Manufacturing</a>
-            <a href="assembly.html">Assembly</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </div>
-</header>
+<div class="container">
+    <h1>Unodoer Inc</h1>
+    <h2>Advanced PCB Design & Manufacturing</h2>
 
-<section class="hero">
-    <div class="container">
-        <h1>Advanced PCB Design & Electronics Manufacturing</h1>
-        <p>Kwun Tong Industrial Area, Kowloon, Hong Kong</p>
-        <a href="contact.html" class="btn">Request a Quote</a>
-    </div>
-</section>
+    <p>
+        Our website is currently under construction.<br>
+        We are building something professional and powerful.
+    </p>
 
-<section class="section container">
-    <h2>About Unodoer Inc</h2>
-    <div class="card">
-        <p>
-            Unodoer Inc is a professional PCB design, fabrication and assembly
-            company serving global electronics industries. We specialize in
-            multilayer PCB development, rapid prototyping, SMT assembly and
-            large-scale production with strict IPC standards.
-        </p>
+    <div class="email">
+        For inquiries:<br>
+        <a href="mailto:Info@unoder.com">Info@unoder.com</a>
     </div>
-</section>
+</div>
 
-<footer>
-    <p>© 2026 Unodoer Inc | Hong Kong</p>
-</footer>
+<div class="footer">
+    © 2026 Unodoer Inc | Hong Kong
+</div>
 
 </body>
 </html>
